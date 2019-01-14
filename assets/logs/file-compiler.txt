@@ -96,3 +96,6 @@
 2019-01-13 18:04:03	admin	http://localhost/processwire/palvelut/what/	Compiled file: /site/templates/_func.php
 2019-01-13 18:04:19	admin	http://localhost/processwire/palvelut/what/	Compiled file: /site/templates/_func.php
 2019-01-13 18:04:38	admin	http://localhost/processwire/palvelut/background/	Compiled file: /site/templates/_func.php
+2019-01-14 17:24:46	guest	http://localhost/processwire/koulutus/	Compiled file: /site/templates/_init.php
+2019-01-14 17:24:46	guest	http://localhost/processwire/koulutus/	Compiled file: /site/templates/basic-page.php
+2019-01-14 17:24:46	guest	http://localhost/processwire/koulutus/	Compiled file: /site/templates/_func.php

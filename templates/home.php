@@ -2,20 +2,33 @@
 
 include('./_head.php'); // include header markup ?>
 
-	<div id='content'><?php
+<!-- CONTENT AREA BEGINS -->
+	<section id="cover">
+		<section id="info_text"><?php
 	
 		// output 'headline' if available, otherwise 'title'
-		echo "<h1>" . $page->get('headline|title') . "</h1>";
+		// echo "<h1>" . $page->get('headline|title') . "</h1>";
 	
 		// output bodycopy
 		echo $page->body;
 	
 		// render navigation to child pages
-		renderNav($page->children);
+		// renderNav($page->children);
 	
-	?></div><!-- end content -->
+	?>
+	<p><a href="<?php echo $pages->get(1001)->url;?>" class="forward">Palvelumme</a></p>
+	</section> <!-- Info text -->
+	<section id="picture1"></section> <!-- Picture 1 -->
+	</section> <!-- Cover -->
+	<!-- end content -->
+
 	
-	<div id='sidebar'><?php
+
+	<section id="cover2">
+		<section id="pattern1">
+			
+		</section> <!-- Pattern 1 -->
+		<section id="info_text2"><?php
 	
 		if(count($page->images)) {
 	
@@ -26,13 +39,20 @@ include('./_head.php'); // include header markup ?>
 			$image = $image->width(400);
 			
 			// output the image at the top of the sidebar...
-			echo "<img src='$image->url' alt='$image->description' />";
+			// echo "<img src='$image->url' alt='$image->description' />";
+			
 		}
 	
 		// output sidebar text if the page has it
 		echo $page->sidebar;
 	
-	?></div><!-- end sidebar -->
+	?>
+		<p><a href="<?php echo $pages->get(1016)->url;?>" class="forward">Ota yhteytt&auml;</a></p>
+		</section> <!-- Info text 2 -->
+	</section> <!-- Cover 2 -->
+	<!-- end sidebar -->
+
+<!-- CONTENT AREA ENDS -->
 
 <?php include('./_foot.php'); // include footer markup ?>
 

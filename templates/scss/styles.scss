@@ -1,0 +1,850 @@
+/* styles.scss */
+/* Author: Antti Paasivaara */
+
+
+/* Color stack */
+
+$dark-green: rgba(2,98,97,1.8);
+$light-green: rgba(82,191,144,1.8);
+
+$white: rgba(255,255,255,1.8);
+$grey: rgba(204,204,204,1.8);
+
+/* Font stack */
+
+$font: Roboto, sans-serif;
+
+$size-languages: 14px;
+$size-menu: 20px;
+
+$fp-title: 30px;
+$fp-text: 22px;
+
+
+/* Picture stack */
+
+$header-logo: transparent url('../img/logo.png') no-repeat;
+
+
+/* Background */
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: $white;
+    font-family: $font;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Header */
+
+header {
+	width: 100%;
+	height: 150px !important;
+	background: $dark-green;
+}
+
+/* Header: Logo */
+
+section#logo {
+	width: 400px;
+	height: 150px !important;
+	background: transparent;
+	float: left;
+}
+
+section#logo a h1 {
+	display: block;
+	width: 400px;
+	height: 150px !important;
+	background: $header-logo;
+	text-indent: -9999px;
+	margin: 0;
+}
+
+
+/* Header: Menu */
+
+header section#menu {
+	width: 50%;
+	height: 150px !important;
+	background: transparent;
+	float: right;
+}
+
+header section#menu nav {
+	margin: 85px 0 0 0;
+}
+
+header section#menu nav ul {
+	list-style: none;
+	margin: 0 25px 0 -40px;
+}
+
+header section#menu nav ul li {
+	float: left;
+	margin: 0 25px 0 0;
+}
+
+header section#menu nav ul li a {
+	display: block;
+	text-decoration: none;
+	height: 35px !important;
+	background: transparent;
+	border-bottom: 2px solid $light-green;
+	padding: 0 25px 0 0;
+	font-size: $size-menu;
+	color: $white;
+}
+
+header section#menu nav ul li a:hover {
+	color: $grey;
+}
+
+header section#menu nav ul.topnav li.current a { 
+	color: $grey;
+}
+
+header section#menu p#languages {
+	position: absolute;
+	margin: 25px 0 0 0;
+}
+
+header section#menu p#languages a {
+	text-decoration: none;
+	color: $white;
+	margin: 0 25px 0 0;
+}
+
+header section#menu p#languages a:hover {
+	color: $grey;
+}
+
+
+/* Content: Frontpage */
+
+/* Content: Frontpage Cover */
+
+section#cover {
+	width: 100%;
+	height: 500px !important;
+	background: transparent;
+}
+
+
+/* Content: Frontpage Info Text */
+
+section#info_text {
+	width: 50%;
+	height: 500px !important;
+	background: $light-green;
+	float: left;
+}
+
+section#info_text h2 {
+	font-size: 30px;
+	font-weight: 400;
+	color: $dark-green;
+	margin: 100px 20% 0 25px;
+}
+
+section#info_text p {
+	font-size: 22px;
+	color: $dark-green;
+	margin: 25px 20% 0 25px;
+}
+
+section#info_text p a {
+	display: block;
+	width: 175px;
+	height: 35px !important;
+	background: transparent url('../img/arrow_right.png') no-repeat center right;
+	margin: 25px 0 0 0;
+	float: right;
+	color: $dark-green;
+	font-size: 18px;
+	font-weight: 900;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 15px 0 0 0;
+}
+
+section#info_text span {
+	font-weight: 900;
+}
+
+
+/* Content: Frontpage Picture 1 */
+
+section#picture1 {
+	width: 50%;
+	height: 500px !important;
+	background: transparent url('../img/picture1.jpg') left top;
+	float: right;
+}
+
+
+/* Content: Cover 2 */
+
+section#cover2 {
+	width: 100%;
+	height: 650px !important;
+	background: transparent;
+}
+
+
+/* Content: Frontpage Pattern 1 */
+
+section#pattern1 {
+	width: 50%;
+	height: 650px !important;
+	background: transparent url('../img/pattern1.png');
+	float: left;
+}
+
+
+/* Content: Frontpage Info text 2 */
+
+section#info_text2 {
+	width: 50%;
+	height: 650px !important;
+	background: rgb(225,225,225);
+	float: right;
+}
+
+section#info_text2 h2 {
+	font-size: 36px;
+	font-weight: 900;
+	color: rgb(2,98,97);
+	margin: 100px 0 0 25px;
+}
+
+section#info_text2 p {
+	font-size: 18px;
+	color: rgb(2,98,97);
+	margin: 25px 20% 0 25px;
+}
+
+section#info_text2 p a {
+	display: block;
+	width: 200px;
+	height: 35px !important;
+	background: transparent url('../img/arrow_right.png') no-repeat center right;
+	margin: 25px 0 0 0;
+	float: right;
+	color: rgb(2,98,97);
+	font-size: 18px;
+	font-weight: 900;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 15px 0 0 0;
+}
+
+
+/* Content: Subsite Cover Title */
+
+section#cover_title {
+	display: block;
+	width: 100%;
+	height: 200px !important;
+	background: transparent;
+}
+
+section#title {
+	width: 50%;
+	height: 200px !important;
+	background: $light-green;
+	float: left;
+}
+
+section#title h1 {
+	font-size: 32px;
+	font-weight: 400;
+	color: $dark-green;
+	margin: 135px 0 0 25px;
+	text-transform: capitalized;
+}
+
+section#title h1 span {
+	margin: 0 0 0 25px;
+}
+
+section#title h1 span.small {
+	font-size: 24px;
+	text-transform: capitalize;
+}
+
+section#cover_picture {
+	width: 50%;
+	height: 200px !important;
+	background: transparent url('../img/picture2.png') no-repeat right top;
+	float: right;
+}
+
+
+/* Breadcrumbs */
+
+ul.breadcrumbs li {
+    list-style: none;
+    margin: 0 0 0 -40px;
+
+    font-size: 32px;
+    font-weight: 400;
+	color: $dark-green;
+    margin: 125px 0 0 -15px;
+	text-transform: capitalized;
+	float: left;
+}
+
+ul.breadcrumbs li:first-child { display: none; }
+
+ul.breadcrumbs li:nth-child(2) a {
+	color: $dark-green;
+	text-decoration: none;
+}
+
+ul.breadcrumbs li:nth-child(2) a:hover {
+	color: $white;
+}
+
+ul.breadcrumbs li:nth-child(3) {
+	color: $dark-green;
+	margin: 138px 0 0 50px;
+	float: left;
+	font-size: 18px;
+}
+
+
+/* Cover Blank */
+
+section#cover_blank {
+	width: 50%;
+	height: 200px !important;
+	background: rgb(82,191,144);
+	float: right;
+}
+
+section#cover_blank p {
+	padding: 135px 0 0 0;
+}
+
+section#cover_blank p a {
+	color: rgb(2,98,97);
+	text-decoration: none;
+	font-weight: 900;
+}
+
+section#cover_blank p a:hover {
+	color: rgb(255,255,255);
+}
+
+section#cover_blank p a span {
+	margin: 0 0 0 15px;
+}
+
+
+/* Content: Subsite Normal bar */
+
+section#content_normalbar {
+	width: 100%;
+	height: 100vh !important;
+	background: $white;
+	padding: 100px 0 0 0;
+}
+
+section#content_normalbar p {
+	font-size: 24px;
+	color: $dark-green;
+	margin: 0 50% 25px 25px;
+}
+
+
+/* Content: Subsite Divided Content bar */
+
+section#content_dividedbar {
+	width: 100%;
+	background: $white;
+}
+
+section#content_dividedbar .left {
+	width: 70%;
+	background: transparent;
+	float: left;
+	padding: 100px 0 0 0;
+}
+
+section#content_dividedbar .left p {
+	font-size: 24px;
+	color: $dark-green;
+	margin: 0 30% 25px 25px;
+}
+
+section#content_dividedbar .left p a {
+	display: block;
+	width: 235px;
+	height: 41px !important;
+	padding: 9px 0 0 15px;
+	background: $white;
+	color: $light-green;
+	border: 2px solid $light-green;
+	text-decoration: none;
+	margin: 75px 0 0 0;
+}
+
+section#content_dividedbar .left p a:hover {
+	color: $dark-green;
+}
+
+section#content_dividedbar .left p.second a {
+	display: block;
+	width: 300px;
+	height: 41px !important;
+	padding: 9px 0 0 15px;
+	background: $white;
+	color: $light-green;
+	border: 2px solid $light-green;
+	text-decoration: none;
+	margin: 75px 0 0 0;
+}
+
+section#content_dividedbar .left p.second a:hover {
+	color: $dark-green;
+}
+
+section#content_dividedbar .menu {
+	width: 26%;
+	height: 500px !important;
+	background: transparent;
+	float: right;
+}
+
+section#content_dividedbar .menu h2 {
+	height: 40px !important;
+	font-size: 24px;
+	font-weight: 400;
+	color: $dark-green;
+	margin: 50px 0 30px 0;
+	border-bottom: 2px solid $light-green;
+}
+
+section#content_dividedbar .menu p {
+	color: $dark-green;
+}
+
+section#content_dividedbar .menu p a {
+	display: block;
+	width: 200px;
+	height: 36px !important;
+	background: $light-green;
+	color: $dark-green;
+	margin: 25px 0 0 0;
+	padding: 14px 0 0 15px;
+	font-size: 18px;
+	font-weight: 900;
+	text-decoration: none;
+}
+
+section#content_dividedbar .menu p a:hover {
+	color: $white;
+}
+
+section#content_dividedbar .menu ul li a:hover {
+	color: $light-green;
+}
+
+section#content_dividedbar .menu p a.current {
+	color: $light-green;
+}
+
+/* ProcessWire Nav Tree */
+
+.nav .nav-tree li {
+	list-style: none;
+	margin: 0 0 7px -80px;
+	color: $dark-green;
+}
+
+.nav .nav-tree li.current a  {
+	color: $light-green;
+}
+
+.nav .nav-tree li a {
+	color: $dark-green;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 900;
+	padding: 0 0 10px 0;
+}
+
+
+#pattern_small {
+	display: block;
+	width: 100%;
+	height: 100px !important;
+	background: transparent url('../img/pattern1.png');
+	margin: 0 0 50px 0;
+}
+
+section#content_dividedbar .right {
+	width: 30%;
+	height: 500px !important;
+	background: transparent;
+	float: right;
+}
+
+section#content_dividedbar .right h2 {
+	height: 40px !important;
+	font-size: 24px;
+	font-weight: 400;
+	color: $dark-green;
+	margin: 50px 0 30px 0;
+	border-bottom: 2px solid $light-green;
+}
+
+section#content_dividedbar .right p {
+	font-size: 18px;
+	font-weight: 400;
+	text-decoration: none;
+	color: $dark-green;
+}
+
+p.right_text {
+	font-size: 18px;
+	font-weight: 400;
+	text-decoration: none;
+	color: $dark-green;
+}
+
+.right_link {
+	display: block;
+	width: 200px;
+	height: 36px !important;
+	background: $light-green;
+	color: $dark-green;
+	text-decoration: none;
+	margin: 45px 0 0 0;
+	padding: 14px 0 0 15px;
+}
+
+section#content_dividedbar .right p a {
+	display: block;
+	width: 200px;
+	height: 36px !important;
+	background: $dark-green;
+	color: $light-green;
+	text-decoration: none;
+	margin: 45px 0 0 0;
+	padding: 14px 0 0 15px;
+}
+
+section#content_dividedbar .right p a:hover {
+	color: rgb(255,255,255);
+}
+
+section#picture5 {
+	width: 100%;
+	height: 300px !important;
+	background: transparent url('../img/picture3.png') no-repeat top center;
+}
+
+
+/* Content: Subsite Divided Content bar 2 */
+
+section#content_dividedbar2 {
+	width: 100%;
+	height: 800px !important;
+	background: rgb(255,255,255);
+	clear: both;
+}
+
+section#content_dividedbar2 .left {
+	width: 50%;
+	background: rgb(255,255,255);
+	float: left;
+}
+
+section#content_dividedbar2 .list {
+	width: 100%;
+	background: transparent;
+}
+
+section#content_dividedbar2 .list div {
+	width: 50%;
+	height: 200px !important;
+	background: rgb(235,235,235);
+	float: left;
+}
+
+section#content_dividedbar2 .list div p {
+	font-size: 18px;
+	color: rgb(2,98,97);
+	margin: 50px 0 0 25px;
+}
+
+section#content_dividedbar2 .list div:nth-child(4n+2), section#content_dividedbar2 .list div:nth-child(4n+3) {
+	width: 50%;
+	height: 200px !important;
+	background: rgb(225,225,225);
+	float: left;
+}
+
+section#content_dividedbar2 .left p {
+	font-size: 24px;
+	color: rgb(2,98,97);
+	margin: 0 30% 25px 25px;
+}
+
+section#content_dividedbar2 .left p a {
+	display: block;
+	width: 235px;
+	height: 41px !important;
+	padding: 9px 0 0 15px;
+	background: rgb(255,255,255);
+	color: rgb(82,191,144);
+	border: 2px solid rgb(82,191,144);
+	text-decoration: none;
+	margin: 75px 0 0 0;
+}
+
+section#content_dividedbar2 .left p a:hover {
+	color: rgb(2,98,97);
+}
+
+section#content_dividedbar2 .right {
+	width: 50%;
+	background: transparent;
+	float: right;
+}
+
+section#content_dividedbar2 .right h2 {
+	height: 40px !important;
+	font-size: 24px;
+	font-weight: 400;
+	color: rgb(2,98,97);
+	margin: 50px 0 30px 25px;
+	border-bottom: 2px solid rgb(82,191,144);
+}
+
+section#content_dividedbar2 .right p {
+	font-size: 18px;
+	font-weight: 400;
+	text-decoration: none;
+	color: rgb(2,98,97);
+	margin: 0 0 0 25px;
+}
+
+
+
+/* Footer */
+
+footer {
+	width: 100%;
+	height: 155px !important;
+	background: transparent;
+	padding: 100px 0 0 0;
+	clear: both;
+}
+
+.wrapper {
+	min-height: 100%;
+	margin-bottom: -255px;
+}
+
+footer, .push {
+	height: 255px !important;
+}
+
+
+/* Footer: Logo */
+
+footer section#logo {
+	width: 185px;
+	height: 200px !important;
+	background: transparent;
+	float: right;
+}
+
+footer section#logo a h1 {
+	display: block;
+	width: 185px;
+	height: 200px !important;
+	background: transparent url('../img/logomark.png') no-repeat;
+	text-indent: -9999px;
+	margin: 0;
+}
+
+
+/* Footer: Content */
+
+footer section#content {
+	width: 50%;
+	height: 225px !important;
+	background: transparent;
+	border-top: 2px solid rgb(82,191,144);
+	float: left;
+}
+
+
+/* Footer: Content Info */
+
+footer section#info {
+	height: 200px !important;
+	background: transparent;
+	float: left;
+}
+
+footer section#info p {
+	font-size: 18px;
+	color: $dark-green;
+	margin: 25px 0 0 25px;
+}
+
+footer section#info p span {
+	padding: 0 0 0 50px;
+}
+
+footer section#info p span a {
+	color: $light-green;
+	text-decoration: none;
+}
+
+footer section#info p span a:hover {
+	color: $dark-green;
+}
+
+
+/* Footer: Content Menu 2 */
+
+footer section#menu2 {
+	float: right;
+	margin: 25px 0 0 0;
+}
+
+footer section#menu2 nav ul {
+	list-style: none;
+	margin: 0 0 0 -40px;
+}
+
+footer section#menu2 nav ul li {
+	margin: 0 0 10px 0;
+}
+
+footer section#menu2 nav ul li a {
+	display: block;
+	color: $dark-green;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+footer section#menu2 nav ul li a:hover {
+	color: $light-green;
+}
+
+
+
+/* CSS Animations */
+
+/* Forward */
+
+.forward {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+}
+.forward:hover, .forward:focus, .forward:active {
+	-webkit-transform: translateX(15px);
+	transform: translateX(15px);
+}
+
+/* Fade In */
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+/* Fade Out */
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}

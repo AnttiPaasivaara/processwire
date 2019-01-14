@@ -2,44 +2,59 @@
 
 include('./_head.php'); // include header markup ?>
 
-	<div id='content'><?php 
-	
-		// output 'headline' if available, otherwise 'title'
-		echo "<h1>" . $page->get('headline|title') . "</h1>";
-	
-		// output bodycopy
-		echo $page->body; 
-	
-		// render navigation to child pages
-		renderNav($page->children); 
-		
-		// TIP: Notice that this <div id='content'> section is
-		// identical between home.php and basic-page.php. You may
-		// want to move this to a separate file, like _content.php
-		// and then include('./_content.php'); here instead, on both
-		// the home.php and basic-page.php template files. Then when
-		// you make yet more templates that need the same thing, you
-		// can simply include() it from them.
-	
-	?></div><!-- end content -->
+	<!-- CONTENT AREA BEGINS -->
+	<section id="cover_title">
+		<section id="title">
+			<nav><?php
+			echo "<ul class=\"breadcrumbs \">";
 
-	<aside id='sidebar'><?php
+			$parents = $page->parents;
+			
+			foreach($parents as $parent) {
+				$url = $parent->url;
+				echo "<li><a href='$url'>{$parent->title}</a></li>\n";
+			}
+			
+			// show current / "we are here" page as well, but not as link: (last element)
+			echo "<li>{$page->title}</li>\n";
+			
+			echo "</ul>";
+			?></nav>
+		</section> <!-- Title -->
+	<section id="cover_picture">
+
+	</section> <!-- Cover picture -->
+</section> <!-- Cover --><!-- end content -->
+	<section id="content_dividedbar">
+		<section class="left">
+			<?php 
+			// output 'headline' if available, otherwise 'title'
+			// echo "<h1>" . $page->get('headline|title') . "</h1>";
+
+			// output bodycopy
+			echo $page->body; 
+			?>
+		</section>
+	<section class="menu">
+	<div id="pattern_small"></div>
+		<nav>
+			<?php
+			// rootParent is the parent page closest to the homepage
+			// you can think of this as the "section" that the user is in
+			// so we'll assign it to a $section variable for clarity
+				$section = $page->rootParent; 
 	
-		// rootParent is the parent page closest to the homepage
-		// you can think of this as the "section" that the user is in
-		// so we'll assign it to a $section variable for clarity
-		$section = $page->rootParent; 
-	
-		// if there's more than 1 page in this section...
-		if($section->hasChildren > 1) {
+			// if there's more than 1 page in this section...
+				if($section->hasChildren > 1) {
 			// output sidebar navigation
 			// see _init.php for the renderNavTree function
-			renderNavTree($section);
-		}
-	
-		// output sidebar text if the page has it
-		echo $page->sidebar; 
-	
-	?></aside><!-- end sidebar -->
-
+				renderNavTree($section);
+			}
+			// output sidebar text if the page has it
+				echo $page->sidebar; 
+			?>
+		</nav>
+	</section> <!-- Menu -->
+</section> <!-- Divided content bar -->
+<!-- CONTENT AREA ENDS -->
 <?php include('./_foot.php'); // include footer markup ?>
